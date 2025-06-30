@@ -1,8 +1,21 @@
-export default function Home() {
+import HeroSection from '@/components/waiting-lp/sections/HeroSection'
+import ProblemSection from '@/components/waiting-lp/sections/ProblemSection'
+import SolutionSection from '@/components/waiting-lp/sections/SolutionSection'
+import WriterSection from '@/components/waiting-lp/sections/WriterSection'
+import PreviewSection from '@/components/waiting-lp/sections/PreviewSection'
+import BenefitSection from '@/components/waiting-lp/sections/BenefitSection'
+import CTASection from '@/components/waiting-lp/sections/CTASection'
+
+export default function WaitingLandingPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold">おやこの間</h1>
-      <p className="mt-4 text-lg">準備中...</p>
+    <main className="min-h-screen bg-white">
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <WriterSection />
+      <PreviewSection />
+      <BenefitSection />
+      <CTASection />
     </main>
   )
 }
