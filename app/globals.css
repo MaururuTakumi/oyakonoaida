@@ -18,7 +18,7 @@
   }
   
   .section-padding {
-    @apply px-4 md:px-8 lg:px-16 py-16 md:py-24;
+    @apply px-4 md:px-8 lg:px-16 py-12 md:py-20 lg:py-24;
   }
   
   .container-max {
@@ -27,6 +27,15 @@
 }
 
 @layer utilities {
+  /* Z-index scale */
+  .z-0 { z-index: 0; }
+  .z-10 { z-index: 10; }
+  .z-20 { z-index: 20; }
+  .z-25 { z-index: 25; }
+  .z-30 { z-index: 30; }
+  .z-40 { z-index: 40; }
+  .z-50 { z-index: 50; }
+  
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
   }

@@ -13,7 +13,7 @@ export default function HeroSection() {
   }, [])
   
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-light/10 to-secondary-light/10">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-light/10 to-secondary-light/10 pt-16 md:pt-20">
       <div className="container-max section-padding">
         <div className="text-center">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">

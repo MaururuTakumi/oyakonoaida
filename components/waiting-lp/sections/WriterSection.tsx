@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useState } from 'react'
 
 const writers = [
@@ -50,7 +49,7 @@ export default function WriterSection() {
   const [activeWriter, setActiveWriter] = useState(0)
   
   return (
-    <section className="section-padding bg-gray-50">
+    <section id="writers" className="section-padding bg-gray-50">
       <div className="container-max">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
@@ -62,7 +61,7 @@ export default function WriterSection() {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="flex justify-center gap-4 mb-8 overflow-x-auto pb-4">
+          <div className="flex justify-center gap-2 md:gap-4 mb-8 overflow-x-auto pb-4">
             {writers.map((writer, index) => (
               <button
                 key={writer.id}
@@ -73,7 +72,7 @@ export default function WriterSection() {
                     : 'opacity-70 hover:opacity-100'
                 }`}
               >
-                <div className="w-20 h-20 bg-gray-300 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-300 rounded-full flex items-center justify-center">
                   <span className="text-2xl font-bold text-gray-600">
                     {writer.name.charAt(0)}
                   </span>

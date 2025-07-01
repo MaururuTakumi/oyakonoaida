@@ -21,7 +21,7 @@ export default function SolutionSection() {
   ]
   
   return (
-    <section className="section-padding">
+    <section id="solution" className="section-padding">
       <div className="container-max">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
