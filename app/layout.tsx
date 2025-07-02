@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Noto_Sans_JP } from 'next/font/google'
 import './globals.css'
+import GoogleAnalytics from './GoogleAnalytics'
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
@@ -9,6 +10,7 @@ const notoSansJP = Noto_Sans_JP({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://oyakonoaida.com'),
   title: 'おやこの間 - 東大生が語る、親に言えなかった本音',
   description: '親と子どもの「あいだ」にある情報ギャップを可視化。東大生10名が受験期の本音を語る、新しい教育メディアが始まります。',
   keywords: ['おやこの間', '東大生', '受験', '教育', '親子関係', '体験談'],
@@ -34,6 +36,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className={notoSansJP.className}>{children}</body>
     </html>
   )

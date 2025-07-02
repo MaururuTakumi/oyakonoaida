@@ -1,5 +1,7 @@
 'use client'
 
+import { trackLineAddFriend } from '@/lib/gtag'
+
 interface LineCTAButtonProps {
   size?: 'normal' | 'large'
   variant?: 'default' | 'white'
@@ -11,15 +13,12 @@ export default function LineCTAButton({
 }: LineCTAButtonProps) {
   const handleClick = () => {
     // Track conversion
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'LINE_FRIEND_ADD',
-      })
-    }
+    trackLineAddFriend()
     
     // Redirect to LINE add friend URL
     // TODO: Replace with actual LINE URL
-    window.open('https://line.me/R/ti/p/@oyakonoaida', '_blank')
+    const lineUrl = process.env.NEXT_PUBLIC_LINE_ADD_FRIEND_URL || 'https://line.me/R/ti/p/@oyakonoaida'
+    window.open(lineUrl, '_blank')
   }
   
   const sizeClasses = size === 'large' 

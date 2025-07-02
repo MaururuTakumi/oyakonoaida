@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import WriterImage from '../ui/WriterImage'
 
 const writers = [
   {
@@ -72,11 +73,11 @@ export default function WriterSection() {
                     : 'opacity-70 hover:opacity-100'
                 }`}
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-300 rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-gray-600">
-                    {writer.name.charAt(0)}
-                  </span>
-                </div>
+                <WriterImage 
+                  name={writer.name} 
+                  imageUrl={writer.image.startsWith('/images/') ? writer.image : undefined}
+                  size="small"
+                />
               </button>
             ))}
           </div>
