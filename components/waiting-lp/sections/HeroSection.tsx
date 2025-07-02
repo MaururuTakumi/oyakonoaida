@@ -34,7 +34,7 @@ export default function HeroSection() {
             {mounted && (
               <div className="text-sm text-gray-600">
                 <p className="mb-2">サービス開始まで</p>
-                <CountdownTimer targetDate={new Date('2025-02-01')} />
+                <CountdownTimer targetDate={new Date('2025-08-15')} />
               </div>
             )}
           </div>
