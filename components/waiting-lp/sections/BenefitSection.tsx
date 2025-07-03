@@ -12,7 +12,7 @@ export default function BenefitSection() {
   
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const deadline = new Date('2025-01-31T23:59:59')
+      const deadline = new Date('2025-08-15T23:59:59')
       const now = new Date()
       const distance = deadline.getTime() - now.getTime()
       
@@ -40,7 +40,7 @@ export default function BenefitSection() {
             <span className="text-primary">特典</span>
           </h2>
           <p className="text-lg text-gray-700">
-            2025年1月31日までの登録者限定
+            2025年8月15日までの登録者限定
           </p>
         </div>
         
@@ -123,7 +123,7 @@ export default function BenefitSection() {
               <div className="text-center">
                 <LineCTAButton size="large" />
                 <p className="text-sm text-gray-600 mt-4">
-                  ※ 2025年1月31日までの期間限定特典です
+                  ※ 2025年8月15日までの期間限定特典です
                 </p>
               </div>
             </div>
